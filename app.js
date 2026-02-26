@@ -11,8 +11,11 @@ function calculate(){
 
   const rmWeight = parseFloat(document.getElementById("rmWeight").value);
   const testRM = parseInt(document.getElementById("testRM").value);
+
+  // ✅ Intensität aus Dropdown
   const RI =
-  parseFloat(document.getElementById("intensity").value) / 100;
+    parseFloat(document.getElementById("intensity").value) / 100;
+
   const step = parseFloat(document.getElementById("roundStep").value);
 
   const tbody = document.getElementById("resultTable");
