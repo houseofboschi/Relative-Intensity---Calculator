@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", () => {
+
 const rmTable = {
   1:1.00, 2:0.95, 3:0.93, 4:0.90, 5:0.87,
   6:0.85, 7:0.83, 8:0.80, 9:0.77, 10:0.75
@@ -12,7 +14,6 @@ function calculate(){
   const rmWeight = parseFloat(document.getElementById("rmWeight").value);
   const testRM = parseInt(document.getElementById("testRM").value);
 
-  // ✅ Intensität aus Dropdown
   const RI =
     parseFloat(document.getElementById("intensity").value) / 100;
 
@@ -35,6 +36,20 @@ function calculate(){
       <tr>
         <td>${reps}</td>
         <td>${(percent*100).toFixed(1)}%</td>
+        <td>${weight.toFixed(1)}</td>
+      </tr>
+    `;
+
+    tbody.innerHTML += row;
+  }
+}
+
+document.querySelectorAll("input,select")
+  .forEach(el => el.addEventListener("input", calculate));
+
+calculate();
+
+});        <td>${(percent*100).toFixed(1)}%</td>
         <td>${weight.toFixed(1)}</td>
       </tr>
     `;
