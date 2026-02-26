@@ -13,6 +13,8 @@ function calculate(){
   const testRM = parseInt(document.getElementById("testRM").value);
   const RI = parseFloat(document.getElementById("ri").value);
   const step = parseFloat(document.getElementById("roundStep").value);
+  const intensity =
+  parseFloat(document.getElementById("intensity").value) / 100;
 
   const tbody = document.getElementById("resultTable");
   tbody.innerHTML = "";
